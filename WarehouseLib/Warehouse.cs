@@ -12,6 +12,7 @@ namespace WarehouseLib
             {
                 throw new ArgumentException();
             }
+            
             throw new NotImplementedException();
         }
 
@@ -21,6 +22,12 @@ namespace WarehouseLib
             {
                 throw new ArgumentException();
             }
+
+            if (HasProduct(product) == false)
+            {
+                throw new NoSuchProductException(product);
+            }
+
             throw new NotImplementedException();
         }
 
@@ -39,6 +46,17 @@ namespace WarehouseLib
             {
                 throw new ArgumentException();
             }
+
+            if (HasProduct(product) == false)
+            {
+                throw new NoSuchProductException(product);
+            }
+
+            if (CurrentStock(product) < amount)
+            {
+                throw new InsufficientStockException(amount);
+            }
+
             throw new NotImplementedException();
         }
     }
