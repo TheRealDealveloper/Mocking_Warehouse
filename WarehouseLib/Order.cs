@@ -2,7 +2,7 @@
 
 namespace WarehouseLib
 {
-    public class Class1
+    public class Order
     {
     }
 }
