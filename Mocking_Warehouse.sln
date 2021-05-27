@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mocking_Warehouse", "Mocking_Warehouse\Mocking_Warehouse.csproj", "{CC4BD834-9408-4CDF-B9CC-E59BED4DBF4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mocking_Warehouse", "Mocking_Warehouse\Mocking_Warehouse.csproj", "{CC4BD834-9408-4CDF-B9CC-E59BED4DBF4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarehouseLib", "WarehouseLib\WarehouseLib.csproj", "{52003C74-2D4B-4034-9F7C-C6A97640ED2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{CC4BD834-9408-4CDF-B9CC-E59BED4DBF4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC4BD834-9408-4CDF-B9CC-E59BED4DBF4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC4BD834-9408-4CDF-B9CC-E59BED4DBF4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52003C74-2D4B-4034-9F7C-C6A97640ED2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52003C74-2D4B-4034-9F7C-C6A97640ED2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52003C74-2D4B-4034-9F7C-C6A97640ED2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52003C74-2D4B-4034-9F7C-C6A97640ED2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

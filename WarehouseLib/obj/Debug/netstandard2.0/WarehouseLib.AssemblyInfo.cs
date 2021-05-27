@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Mocking_Warehouse")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("WarehouseLib")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("Mocking_Warehouse")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Mocking_Warehouse")]
+[assembly: System.Reflection.AssemblyProductAttribute("WarehouseLib")]
+[assembly: System.Reflection.AssemblyTitleAttribute("WarehouseLib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Von der MSBuild WriteCodeFragment-Klasse generiert.
