@@ -6,14 +6,19 @@ namespace WarehouseLib
 {
     class Warehouse : IWarehouse
     {
+        public List<Stock> Stocks { get; set; }
         public void AddStock(string product, int amount)
         {
             if (String.IsNullOrWhiteSpace(product))
             {
                 throw new ArgumentException();
             }
-            
-            throw new NotImplementedException();
+
+            Stocks.Add(new Stock
+            {
+                Product = product,
+                Amount = amount
+            });
         }
 
         public int CurrentStock(string product)
@@ -28,7 +33,14 @@ namespace WarehouseLib
                 throw new NoSuchProductException(product);
             }
 
-            throw new NotImplementedException();
+            foreach (var stock in Stocks)
+            {
+                if (stock.Product == product)
+                {
+                    return stock.Amount;
+                }
+            }
+            return 0;
         }
 
         public bool HasProduct(string product)
@@ -37,7 +49,14 @@ namespace WarehouseLib
             {
                 throw new ArgumentException();
             }
-            throw new NotImplementedException();
+            foreach (var stock in Stocks)
+            {
+                if (stock.Product == product)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public void TakeStock(string product, int amount)
@@ -57,7 +76,18 @@ namespace WarehouseLib
                 throw new InsufficientStockException(amount);
             }
 
-            throw new NotImplementedException();
+            foreach (var stock in Stocks)
+            {
+                if (stock.Product == product)
+                {
+                    //void
+                }
+            }
+        }
+
+        public Warehouse()
+        {
+            this.Stocks = new List<Stock>();
         }
     }
 }
