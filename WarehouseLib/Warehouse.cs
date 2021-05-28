@@ -4,9 +4,10 @@ using System.Text;
 
 namespace WarehouseLib
 {
-    class Warehouse : IWarehouse
+    public class Warehouse : IWarehouse
     {
-        public List<Stock> Stocks { get; set; }
+        private IOrder order;
+        //public List<Stock> Stocks { get; set; }
         public void AddStock(string product, int amount)
         {
             if (String.IsNullOrWhiteSpace(product))
@@ -14,11 +15,11 @@ namespace WarehouseLib
                 throw new ArgumentException();
             }
 
-            Stocks.Add(new Stock
-            {
-                Product = product,
-                Amount = amount
-            });
+            //Stocks.Add(new Stock
+            //{
+            //    Product = product,
+            //    Amount = amount
+            //});
         }
 
         public int CurrentStock(string product)
@@ -33,14 +34,8 @@ namespace WarehouseLib
                 throw new NoSuchProductException(product);
             }
 
-            foreach (var stock in Stocks)
-            {
-                if (stock.Product == product)
-                {
-                    return stock.Amount;
-                }
-            }
-            return 0;
+            
+            return 1;
         }
 
         public bool HasProduct(string product)
@@ -49,14 +44,7 @@ namespace WarehouseLib
             {
                 throw new ArgumentException();
             }
-            foreach (var stock in Stocks)
-            {
-                if (stock.Product == product)
-                {
-                    return true;
-                }
-            }
-            return false;
+            return true;
         }
 
         public void TakeStock(string product, int amount)
@@ -75,19 +63,11 @@ namespace WarehouseLib
             {
                 throw new InsufficientStockException(amount);
             }
-
-            foreach (var stock in Stocks)
-            {
-                if (stock.Product == product)
-                {
-                    //void
-                }
-            }
+            
         }
 
         public Warehouse()
         {
-            this.Stocks = new List<Stock>();
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WarehouseLib
 {
-    interface IWarehouse
+    public interface IWarehouse
     {
         bool HasProduct(string product);
         int CurrentStock(string product);

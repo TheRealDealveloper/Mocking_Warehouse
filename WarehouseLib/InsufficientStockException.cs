@@ -5,7 +5,7 @@ using System.Text;
 namespace WarehouseLib
 {
     [Serializable]
-    class InsufficientStockException : Exception
+    public class InsufficientStockException : Exception
     {
         public InsufficientStockException()
         {

@@ -5,7 +5,7 @@ using System.Text;
 namespace WarehouseLib
 {
     [Serializable]
-    class NoSuchProductException : Exception
+    public class NoSuchProductException : Exception
     {
         public NoSuchProductException()
         {

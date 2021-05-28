@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WarehouseLib
 {
-    class Stock
+    public class Stock
     {
         private int amount;
         private string product;

@@ -1,0 +1,9 @@
+C:\Users\James\source\repos\Mocking_Warehouse\WarehouseLib\bin\Debug\netstandard2.0\WarehouseLib.deps.json
+C:\Users\James\source\repos\Mocking_Warehouse\WarehouseLib\bin\Debug\netstandard2.0\WarehouseLib.dll
+C:\Users\James\source\repos\Mocking_Warehouse\WarehouseLib\bin\Debug\netstandard2.0\WarehouseLib.pdb
+C:\Users\James\source\repos\Mocking_Warehouse\WarehouseLib\obj\Debug\netstandard2.0\WarehouseLib.csprojAssemblyReference.cache
+C:\Users\James\source\repos\Mocking_Warehouse\WarehouseLib\obj\Debug\netstandard2.0\WarehouseLib.AssemblyInfoInputs.cache
+C:\Users\James\source\repos\Mocking_Warehouse\WarehouseLib\obj\Debug\netstandard2.0\WarehouseLib.AssemblyInfo.cs
+C:\Users\James\source\repos\Mocking_Warehouse\WarehouseLib\obj\Debug\netstandard2.0\WarehouseLib.csproj.CoreCompileInputs.cache
+C:\Users\James\source\repos\Mocking_Warehouse\WarehouseLib\obj\Debug\netstandard2.0\WarehouseLib.dll
+C:\Users\James\source\repos\Mocking_Warehouse\WarehouseLib\obj\Debug\netstandard2.0\WarehouseLib.pdb
