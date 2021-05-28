@@ -4,5 +4,6 @@ namespace WarehouseLib
 {
     public class Order
     {
+
     }
 }
