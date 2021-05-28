@@ -7,31 +7,6 @@ namespace WarehouseLib
         private IWarehouse warehouse;
         private string product;
         private int amount;
-        //private bool canfillorder;
-        //private bool isfilled;
-
-        //public bool Canfillorder 
-        //{
-        //    get
-        //    {
-        //        return this.canfillorder;
-        //    }
-        //    set
-        //    {
-        //        this.canfillorder = value;
-        //    }
-        //}
-        //public bool Isfilled
-        //{
-        //    get
-        //    {
-        //        return this.isfilled;
-        //    }
-        //    set
-        //    {
-        //        this.isfilled = value;
-        //    }
-        //}
         public Order(string product, int amount)
         {
             this.product = product;

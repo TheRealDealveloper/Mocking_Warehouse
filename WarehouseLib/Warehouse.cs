@@ -7,19 +7,24 @@ namespace WarehouseLib
     public class Warehouse : IWarehouse
     {
         private IOrder order;
-        //public List<Stock> Stocks { get; set; }
+
+        private Dictionary<string, int> stocks = new Dictionary<string, int>();
         public void AddStock(string product, int amount)
         {
             if (String.IsNullOrWhiteSpace(product))
             {
                 throw new ArgumentException();
             }
-
-            //Stocks.Add(new Stock
-            //{
-            //    Product = product,
-            //    Amount = amount
-            //});
+            if (stocks.TryGetValue(product, out int num))
+            {
+                int temp = num + amount;
+                stocks.Remove(product);
+                stocks.Add(product, temp);
+            }
+            else
+            {
+                stocks.Add(product, amount);
+            }
         }
 
         public int CurrentStock(string product)
@@ -34,8 +39,9 @@ namespace WarehouseLib
                 throw new NoSuchProductException(product);
             }
 
-            
-            return 1;
+            stocks.TryGetValue(product, out int num);
+
+            return num;
         }
 
         public bool HasProduct(string product)
@@ -44,7 +50,11 @@ namespace WarehouseLib
             {
                 throw new ArgumentException();
             }
-            return true;
+            if (stocks.ContainsKey(product))
+            {
+                return true;
+            }
+            return false;
         }
 
         public void TakeStock(string product, int amount)
@@ -63,11 +73,21 @@ namespace WarehouseLib
             {
                 throw new InsufficientStockException(amount);
             }
-            
+
+            stocks.TryGetValue(product, out int num);
+            int temp = num + amount;
+            stocks.Remove(product);
+            stocks.Add(product, temp);
+
         }
 
         public Warehouse()
         {
+        }
+
+        public Warehouse(IOrder order)
+        {
+            this.order = order;
         }
     }
 }
